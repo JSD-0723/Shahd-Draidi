@@ -1,0 +1,153 @@
+
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+}
+body
+{
+    font-family: 'Nunito Sans', sans-serif;
+    font-weight: 400;
+}
+  
+.container{
+    width: 92%;
+    margin: auto;
+}
+@font-face {
+    font-family: 'Nunito Sans';
+    src: url('../font/NunitoSans_7pt_Condensed-ExtraLight.ttf') ; 
+    font-weight: 200;
+  }
+  
+  @font-face {
+    font-family: 'Nunito Sans';
+    src: url('../font/NunitoSans_7pt_Condensed-Regular.ttf') ;
+    font-weight: 400;
+  }
+  
+  @font-face {
+    font-family: 'Nunito Sans';
+    src: url('../font/NunitoSans_7pt_Condensed-Bold.ttf') ;
+    font-weight: 700;
+  }
+  /* header sec */
+  header{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 67px;
+  }
+  header h1{
+    font-size: 18px;
+    color:#0768AC ;
+
+  }
+  header button{
+    width:110px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-radius: 5px;
+    background-color: white;
+    border-style: none;
+    border:1.2px solid #DDDDDD;
+    font-size: 15px;
+
+  }
+  header ion-icon{
+    margin-right: 7px;
+    margin-top: 1px;
+
+  }
+  /* welcome sec */
+ .welcome-sec{
+    height:115px;
+ }
+ .triangles {
+    display: flex;
+    position: relative;
+  }
+ .triangle-topleft,
+ .triangle-topright {
+   position: absolute;
+   top: 0;
+   width: 0;
+   height: 0;
+ }
+ 
+ .triangle-topleft {
+   border-top: 70px solid #0768AC; 
+   border-right: 1250px solid transparent;
+   left: 0;
+   z-index: 1; 
+ }
+ 
+ .triangle-topright {
+   border-top: 70px solid #03C180 ; /* Change color to blue */
+   border-left: 1250px solid transparent;
+   right: 0;
+ }
+ /*  web Tobics sec*/
+ .webTobics-sec{
+    background-color: #F0F9FF;
+    height: 500px;
+    position: relative;
+  }
+  .search-sec{
+    width:92%;
+    height:50px;
+    background-color: white;
+    position: absolute;
+    top:20px;
+    left:55px;
+    border-radius: 10px;
+    box-shadow: 0 0 3px #DDDDDD;
+    display: flex;
+  }
+  .search-sec input{
+    border-style: none;
+    font-size: 17px;
+    width:70%;
+  }
+  .search-icon{
+    padding:17px 10px;
+    font-size: 15px;
+  }
+  .search-sec label{
+    display: block;
+    text-align: left;
+    margin-bottom: 4px;
+    font-size: 12px;
+  }
+  .search-btns{
+    width:27%;
+    margin-left: 5px;
+    display: flex;
+    
+  }
+  .search-btns button{
+    width:50%;
+    background-color: white;
+    border-style: none;
+    border-left:1px solid #DDDDDD;
+    border-right: transparent;
+    text-align: left;
+    padding-left: 15px;
+    font-size: 15.9px;
+  }
+  .search-btns ion-icon{
+    margin-left: 90px;
+    font-size:12px ;
+    
+  }
+  .search-btns .second-btn{
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+  }
+  .webTopics-info{
+    position:relative;
+    top:95px;
+
+  }
+  
+ 

@@ -11,7 +11,7 @@ body
 }
   
 .container{
-    width: 92%;
+    width: 92vw;
     margin: auto;
 }
 @font-face {
@@ -36,22 +36,22 @@ body
     display:flex;
     justify-content: space-between;
     align-items: center;
-    height: 67px;
+    height: 11vh;
   }
   header h1{
-    font-size: 18px;
+    font-size: 15px;
     color:#0768AC ;
 
   }
   header button{
-    width:110px;
+    width:8vw;
     padding-top: 5px;
     padding-bottom: 5px;
     border-radius: 5px;
     background-color: white;
     border-style: none;
     border:1.2px solid #DDDDDD;
-    font-size: 15px;
+    font-size: 13px;
 
   }
   header ion-icon{
@@ -61,7 +61,7 @@ body
   }
   /* welcome sec */
  .welcome-sec{
-    height:115px;
+    height:17vh;
  }
  .triangles {
     display: flex;
@@ -76,48 +76,50 @@ body
  }
  
  .triangle-topleft {
-   border-top: 70px solid #0768AC; 
-   border-right: 1250px solid transparent;
+   border-top: 10vh solid #0768AC; 
+   border-right: 90vw solid transparent;
    left: 0;
    z-index: 1; 
  }
  
  .triangle-topright {
-   border-top: 70px solid #03C180 ; /* Change color to blue */
-   border-left: 1250px solid transparent;
+   border-top: 10vh solid #03C180 ; /* Change color to blue */
+   border-left: 90vw solid transparent;
    right: 0;
  }
  /*  web Tobics sec*/
  .webTobics-sec{
     background-color: #F0F9FF;
-    height: 500px;
+    height: 900px;
     position: relative;
   }
   .search-sec{
-    width:92%;
-    height:50px;
+    width:91vw;
+    height:7vh;
     background-color: white;
     position: absolute;
-    top:20px;
-    left:55px;
-    border-radius: 10px;
+    top:3vh;
+    left:4vw;
+    border-radius: 7px;
     box-shadow: 0 0 3px #DDDDDD;
     display: flex;
   }
   .search-sec input{
     border-style: none;
-    font-size: 17px;
+    font-size: 14px;
     width:70%;
+    margin-top: 5px;
   }
   .search-icon{
-    padding:17px 10px;
-    font-size: 15px;
+    padding:15px 10px;
+    font-size: 14px;
   }
   .search-sec label{
     display: block;
     text-align: left;
-    margin-bottom: 4px;
-    font-size: 12px;
+    margin-top: 5px;
+    margin-bottom: 3px;
+    font-size: 11px;
   }
   .search-btns{
     width:27%;
@@ -132,12 +134,15 @@ body
     border-left:1px solid #DDDDDD;
     border-right: transparent;
     text-align: left;
-    padding-left: 15px;
-    font-size: 15.9px;
+    padding-left: 13px;
+    font-size: 13px;
+    position: relative;
   }
   .search-btns ion-icon{
-    margin-left: 90px;
-    font-size:12px ;
+    position: absolute;
+    left: 85%;
+    top:50%;
+    font-size:11px ;
     
   }
   .search-btns .second-btn{
@@ -146,8 +151,57 @@ body
   }
   .webTopics-info{
     position:relative;
-    top:95px;
-
+    top:13vh;
+  }
+  .webTopics-info h2{
+    font-size: 23px;
+    margin-left:10px;
+  }
+  /* logo sections */
+  .logos-container{
+    position: relative;
+    top:18vh ;
+    display:flex ;
+    flex-wrap:wrap;
+    justify-content: space-between;
+    
+  }
+  .logo-sec{
+    margin-left: 10px;
+    width:17.5%;
+    height: 245px;
+    background-color: white;
+    border-radius: 6px;
+    font-size: 12px;
+    margin-bottom: 25px;
+  }
+  .logo-img{
+    height: 50%;
   }
   
+  .logo-img img{
+    width:100%;
+    height: auto;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+  }
+  .img-ang{
+    background-image:url(../Logos/angular.png) ;
+    background-size: cover;
+    background-position: -70px;
+  }
+  .logo-info{
+    padding-top: 10px;
+    padding-left: 10px;
+  }
+  .logo-info ion-icon{
+    color: orange;
+    margin-top: 20px;
+    font-size: 13px;
+    
+  }
+  .logo-info .author-name{
+    margin-top: 10px;
+    color: #808080;
+  }
  

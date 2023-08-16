@@ -63,28 +63,35 @@ body
  .welcome-sec{
     height:17vh;
  }
+ 
  .triangles {
-    display: flex;
     position: relative;
   }
  .triangle-topleft,
  .triangle-topright {
    position: absolute;
-   top: 0;
-   width: 0;
-   height: 0;
+   
  }
  
  .triangle-topleft {
-   border-top: 10vh solid #0768AC; 
-   border-right: 90vw solid transparent;
-   left: 0;
-   z-index: 1; 
+  width:70vw;
+  height: 10vh;
+  background: linear-gradient(
+    to right,
+   #0768AC,
+    #03C180
+  );
+  background-size: 100% 100%;
+  clip-path: polygon(140% 0%, 0% 100%, 0% 0%);
+
+  z-index: 1;
  }
  
  .triangle-topright {
-   border-top: 10vh solid #03C180 ; /* Change color to blue */
-   border-left: 90vw solid transparent;
+  width:100vw;
+  height: 10vh;
+   background-color: #03C180 ; 
+   clip-path: polygon(100% 0%, 100% 100%, 0% 0%);
    right: 0;
  }
  /*  web Tobics sec*/

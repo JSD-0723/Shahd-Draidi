@@ -1,4 +1,6 @@
 
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,200;6..12,400;6..12,700&display=swap');
+
 *{
     padding:0;
     margin:0;
@@ -6,62 +8,73 @@
 }
 body
 {
-    font-family: 'Nunito Sans', sans-serif;
-    font-weight: 400;
+  font-family: 'Nunito Sans', sans-serif;
+  font-weight: 400;
+  background-color: var(--bg_body);
+  color: var(--body-text);
+
+}
+:root {
+  --brand-primary: #0768AC;
+  --brand-secondary: #03C180;
+  --bg_default: #FFFFFF;
+  --bg_body: #F0F9FF;
+  --lines-color: #DDDDDD;
+  --body-text: #333333;
+  --heart-color: #DC143C;
+}
+.dark-mode {
+  --bg_default: #1A1A1A;
+  --bg_body: #282828;
+  --lines-color: #000000;
+  --body-text: #EDEDED;
 }
   
 .container{
     width: 92vw;
     margin: auto;
+  
 }
-@font-face {
-    font-family: 'Nunito Sans';
-    src: url('../font/NunitoSans_7pt_Condensed-ExtraLight.ttf') ; 
-    font-weight: 200;
-  }
-  
-  @font-face {
-    font-family: 'Nunito Sans';
-    src: url('../font/NunitoSans_7pt_Condensed-Regular.ttf') ;
-    font-weight: 400;
-  }
-  
-  @font-face {
-    font-family: 'Nunito Sans';
-    src: url('../font/NunitoSans_7pt_Condensed-Bold.ttf') ;
-    font-weight: 700;
-  }
+
   /* header sec */
-  header{
+ header{
+  background-color: var(--bg_default);
+ }
+  header .header-content{
     display:flex;
     justify-content: space-between;
     align-items: center;
-    height: 11vh;
+    height: 70px;
+    background-color: var(--bg_default);
   }
   header h1{
-    font-size: 15px;
-    color:#0768AC ;
+    font-size: 17px;
+    color:var(--brand-primary) ;
 
   }
   header button{
-    width:8vw;
-    padding-top: 5px;
-    padding-bottom: 5px;
+    width:7.7vw;
+    padding-top: 7px;
+    padding-bottom: 7px;
     border-radius: 5px;
-    background-color: white;
+    background-color: var(--bg_default);
     border-style: none;
-    border:1.2px solid #DDDDDD;
-    font-size: 13px;
+    border:1.2px solid var(--lines-color);
+    font-size: 14px;
+    box-shadow: 0 0 1px var(--lines-color);
+    color: (var(--body-text));
+    
 
   }
   header ion-icon{
     margin-right: 7px;
-    margin-top: 1px;
-
-  }
+    margin-bottom: -2px; 
+    
+ }
   /* welcome sec */
  .welcome-sec{
-    height:17vh;
+    height:8vw;
+    background-color: var(--bg_default);
  }
  
  .triangles {
@@ -74,12 +87,12 @@ body
  }
  
  .triangle-topleft {
-  width:70vw;
-  height: 10vh;
+  width:75vw;
+  height: 4.6vw;
   background: linear-gradient(
     to right,
-   #0768AC,
-    #03C180
+   var(--brand-primary) 30%,
+    var(--brand-secondary)
   );
   background-size: 100% 100%;
   clip-path: polygon(140% 0%, 0% 100%, 0% 0%);
@@ -89,44 +102,63 @@ body
  
  .triangle-topright {
   width:100vw;
-  height: 10vh;
-   background-color: #03C180 ; 
+  height: 4.6vw;
+   background-color: var(--brand-secondary) ; 
    clip-path: polygon(100% 0%, 100% 100%, 0% 0%);
    right: 0;
  }
+ .welcome-content{
+  position:relative;
+  top:40%;
+  left:35.5%;
+
+ }
+ .welcome-content h2{
+  font-size: 22px;
+  color: var(--brand-secondary);
+ }
  /*  web Tobics sec*/
  .webTobics-sec{
-    background-color: #F0F9FF;
-    height: 900px;
+    height: auto;
     position: relative;
   }
   .search-sec{
     width:91vw;
-    height:7vh;
-    background-color: white;
+    height:3.5vw;
+    background-color: var(--bg_default);
     position: absolute;
     top:3vh;
     left:4vw;
     border-radius: 7px;
-    box-shadow: 0 0 3px #DDDDDD;
+    box-shadow: 0 0 3px var(--lines-color);
     display: flex;
   }
-  .search-sec input{
-    border-style: none;
-    font-size: 14px;
-    width:70%;
-    margin-top: 5px;
+  .search-sec .search-place{
+    display: flex;
+    position: relative;
+    flex-grow: 1; 
   }
-  .search-icon{
-    padding:15px 10px;
-    font-size: 14px;
+  
+  .search-sec input{
+    
+    border-style: none;
+    font-size: 17px;
+    background-color: var(--bg_default);
+    width:100%;
+    outline: none;
+  }
+  .search-place ion-icon{
+    padding:10px 10px;
+    font-size: 15px;
+    margin-top: 7px;
   }
   .search-sec label{
     display: block;
     text-align: left;
     margin-top: 5px;
     margin-bottom: 3px;
-    font-size: 11px;
+    font-size: 12px;
+    color:var(--body-text);
   }
   .search-btns{
     width:27%;
@@ -136,13 +168,14 @@ body
   }
   .search-btns button{
     width:50%;
-    background-color: white;
+    background-color: var(--bg_default);
+    color:var(--body-text);
     border-style: none;
-    border-left:1px solid #DDDDDD;
+    border-left:1px solid var(--lines-color);
     border-right: transparent;
     text-align: left;
     padding-left: 13px;
-    font-size: 13px;
+    font-size: 14px;
     position: relative;
   }
   .search-btns ion-icon{
@@ -158,57 +191,314 @@ body
   }
   .webTopics-info{
     position:relative;
-    top:13vh;
+    top:6vw;
   }
   .webTopics-info h2{
-    font-size: 23px;
-    margin-left:10px;
+    font-size: 1.7vw;
+    font-weight: 700;
   }
-  /* logo sections */
-  .logos-container{
-    position: relative;
-    top:18vh ;
-    display:flex ;
-    flex-wrap:wrap;
-    justify-content: space-between;
-    
+  /* cards sections */
+
+  .html-details{
+    text-decoration: none;
+    color:var(--body-text)
   }
-  .logo-sec{
-    margin-left: 10px;
-    width:17.5%;
-    height: 245px;
-    background-color: white;
+  .cards-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); /* Responsive grid */
+    gap:20px; /* Spacing between grid items */
+    margin-top: 8vw; /* Adjust spacing as needed */
+}
+
+.card-sec {
+    background-color: var(--bg_default);
     border-radius: 6px;
     font-size: 12px;
-    margin-bottom: 25px;
-  }
-  .logo-img{
-    height: 50%;
-  }
-  
-  .logo-img img{
-    width:100%;
-    height: auto;
+    height: 280px;
+}
+
+.card-img {
+    height: 47%;
     border-top-left-radius: 6px;
     border-top-right-radius: 6px;
+    background-size: cover;
+}
+
+
+  .img-html{
+    background-image:url(../cards/html.png) ;
+    background-size: cover;
+
+  }
+  .img-css{
+    background-image:url(../cards/css.webp) ;
+    background-size: cover;
+
+  }
+  .img-js{
+    background-image:url(../cards/javascript.jpg) ;
+    background-size: cover;
+
+  }
+  .img-jquery{
+    background-image:url(../cards/jquery.png) ;
+    background-size: cover;
+
   }
   .img-ang{
-    background-image:url(../Logos/angular.png) ;
+    background-image:url(../cards/angular.png) ;
     background-size: cover;
     background-position: -70px;
   }
-  .logo-info{
-    padding-top: 10px;
-    padding-left: 10px;
+  .img-react{
+    background-image:url(../cards/react.webp) ;
+    background-size: cover;
+
+
   }
-  .logo-info ion-icon{
+  .card-info{
+    margin-top: 14px;
+    margin-left: 13px;
+    font-size: 14px;
+  }
+  .card-info ion-icon{
     color: orange;
     margin-top: 20px;
-    font-size: 13px;
+    font-size: 14px;
     
   }
-  .logo-info .author-name{
+  .card-info .author-name{
     margin-top: 10px;
-    color: #808080;
   }
+  footer{
+    position:relative;
+  }
+  .footer-container{
+    position: absolute;
+    top:20px;
+    left:43%;
+    padding-bottom: 40px;
+    
+  }
+  .footer-container p{
+    font-size: 17px;
+    font-weight: 700;
+
+  }
+   .footer-container ion-icon{
+    color: var(--heart-color);
+    margin-bottom:-4px;
+    font-size: 23px;
+   }
+   .favorite-section {
+    display: none;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    height: 24%; /* Adjust the height as needed */
+    background-color: var(--bg_default);
+    width: 100vw;
+    z-index: 1000;
+    transition: transform 0.5s ease-in-out;
+    padding: 20px;
+    box-shadow: 0 0 1px var(--lines-color);
+    margin:auto;
+    overflow-y: scroll;
+
+  }
+  .favourite-content{
+    margin: auto;
+    width: 100%;  
+  }
+   .favourite-content h2{
+    font-size: 18px;
+    margin-top: -5px;
+    color: var(--body-text);
+   }
+   .fav-cards{
+    margin-top: 1vw;
+    grid-template-columns: repeat(auto-fill, minmax(114.48px, 1fr)); /* Responsive grid */
+
+   }
+   .fav-card{
+    height: 119px;
+    box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.3);
+
+   }
+   .fav-card ion-icon{
+    margin-top: 4px;
+   }
  
+
+@media screen and (max-width: 766px) {
+  
+  header .header-content{
+    height:100px;
+
+  }
+  header h1 {
+      margin-top: 10px;
+      font-size: 20px;
+  }
+  header button {
+      font-size: 0px;
+      padding:8px 28px;
+      border:2px solid var(--lines-color);
+      margin-right: 5px;
+
+      
+  }
+  header ion-icon{
+    font-size: 25px;
+    margin-left:-10px;
+
+  }
+  .welcome-sec{
+    height: 29vw;
+  }
+  .triangle-topleft {
+    width:60vw;
+    height: 7vw;
+  }
+  .triangle-topright{
+    width:75vw;
+    height:  7vw;;
+  }
+  .welcome-content{
+    position:relative;
+    top:30%;
+    left:4%;
+    width:94%;
+  
+   }
+   .welcome-content h2{
+    font-size: 30px;
+   }
+   .welcome-content p{
+    font-size: 20px;
+   }
+   /* search section */
+   .search-sec{
+    display:block;
+    margin-top:3vw;
+    height: 26vw;
+    
+   }
+   .search-place{
+    border-style:none;
+    height: 13vw;
+    border-bottom: 1px solid var(--lines-color);
+    
+   }
+   .search-place input{
+    width:100%;
+    height: 100%;
+    margin:auto;
+    border-top-right-radius:10px;
+    font-size:30px ;
+    margin-left: 20px;
+   }
+   .search-place ion-icon{
+     margin-top: 25px;
+     margin-left:10px;
+     font-size: 30px;
+
+   }
+   .search-btns{
+    width:95%;
+    margin:auto;
+    height: 13vw;
+   }
+   
+   .search-btns button{
+    border-style: none;
+    width:50%;
+    font-size: 20px;
+
+   }
+   .search-btns label{
+    font-size: 15px;
+   }
+   
+   .webTopics-info{
+    overflow: hidden;
+    top:35vw;
+
+   }
+   .webTopics-info h2{
+    font-size: 35px;
+   }
+   .cards-container{
+    margin-top:40vw;
+    display: block;
+   }
+   .card-sec{
+    margin-bottom: 20px;
+    height: 50vw;
+   }
+   .card-img{
+    height: 60%;
+   }
+  .footer-container{
+    left:35%;
+  }
+  
+
+  
+}
+
+
+  
+  @media screen and (min-width: 767px) and (max-width: 1023px) {
+    
+      header .header-content{
+        height: 40px;
+      }
+      header h1{
+        font-size: 14px;
+    
+      }
+      header button{
+        height: 90%;
+        width:90px;
+        font-size: 12px;
+    
+      }
+     .welcome-content h2{
+      font-size: 15px;
+     }
+     .welcome-content p{
+      font-size: 12px;
+     }
+
+     
+    .search-sec input{
+      font-size: 14px;
+    }
+    .search-place ion-icon{
+      padding:.9px 5px;
+      font-size: 12px;
+      margin-top: 7px;
+    }
+    .search-sec label{
+      margin-top: 3px;
+      margin-bottom: 2px;
+      font-size: 10px;
+    }
+    .search-btns{
+      width:30%;
+      
+    }
+    .search-btns button,.search-btns ion-icon{
+      font-size: 10px;
+  
+    }
+    .cards-container {
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  }
+    .card-info{
+      font-size: 12px;
+    }
+     
+    }
+  

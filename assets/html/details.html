@@ -10,10 +10,10 @@
     <header>
         <div class="container">
             <div class="header-content">
-                <a class="toHome"href="../../index.html"><h1>Web Topics</h1></a>
+                <a href="../../index.html"><h1>Web Topics</h1></a>
                 <div class="user-controls">
-                    <button id="dark-mode-toggle"><ion-icon name="moon-outline"></ion-icon>Dark Mode</button>
-                    <button><ion-icon name="heart-outline"></ion-icon>Favourites</button>
+                    <button id="dark-mode-toggle"><ion-icon name="moon-outline"></ion-icon><span>Dark Mode</span></button>
+                    <button><ion-icon name="heart-outline"></ion-icon><span>Favourites</span></button>
                 </div>
             </div>
             
@@ -25,9 +25,9 @@
             <div class="triangle-topleft"></div>
             <div class="triangle-topright"></div>
         </div>
-        <div class="welcome-content">
+        <div class="welcome-content ">
             <h2>Welcome to our website!</h2>
-            <p>We have a new design that's fresh,modern,and easy to use</p>
+            <p class="category">We have a new design that's fresh,modern,and easy to use.</p>
         </div>
         
     </div>
@@ -36,8 +36,8 @@
         <div class="card-details">
             <div class="details-container">
                <div class="card-info">
-                <p class="heading-para">Web Development Languages</p>
-                <h2>HTML</h2>
+                <p class="heading-para category">Web Development Languages</p>
+                <h2 class="category">HTML</h2>
                 <div class="stars">
                     <ion-icon name="star"></ion-icon>
                     <ion-icon name="star"></ion-icon>
@@ -45,73 +45,126 @@
                     <ion-icon name="star"></ion-icon>
                     <ion-icon name="star-outline"></ion-icon>
                 </div>
-                <p class="html-desc">HTML(Hypertext Markup Language) is the standard markup language for
+                <p class="html-desc card-para-cat">HTML(Hypertext Markup Language) is the standard markup language for
                     creating web pages and other information that can be displayed in a web
                     browser. It provides a structure for content and defines how it should be
                     displayed on a web page, including text , images, and multimedia.HTML is
                     essintial for creating static web pages and is a foundational technology
                     for the World Wide Web.
                 </p>
+                <div class="topic-img">
+                  <div class="img-cont"></div>
+                  <div class="topic-details">
+                      <p class="category"><span>HTML</span> by <a href="#">Sarah Smith</a></p>
+                      <div class="add-favorites-container">
+                        <p class="category">Interested about this topic?</p>
+                        <div class="add-favorites-button category">
+                          Add to Favorites <ion-icon class="heart-icon"name="heart-outline"></ion-icon>
+                        </div>
+                        <p class="unlimited-credits category">Unlimited Credits</p>
+                      </div>
+                    </div>
+                  </div>
                </div>
     
             </div>
         </div>
-        <div class="table-sec">
-            <div class="details-container">
-                <div class="table-container">
-                    <table>
-                        <tr>
-                            <th>HTML Sub Topics</th>
-                        </tr>
-                        <tr>
-                            <td><ion-icon name="checkmark-circle-outline"></ion-icon>HTML syntax and structure</td>
-                        </tr>
-                        <tr>
-                            <td><ion-icon name="checkmark-circle-outline"></ion-icon>HTML elements and attributes</td>
-                        </tr>
-                        <tr>
-                            <td><ion-icon name="checkmark-circle-outline"></ion-icon>HTML forms and input elements</td>
-                        </tr>
-                        <tr>
-                            <td><ion-icon name="checkmark-circle-outline"></ion-icon>HTML tables and lists</td>
-                        </tr>
-                        <tr>
-                            <td><ion-icon name="checkmark-circle-outline"></ion-icon>HTML multimedia elements (audio,video,images)</td>
-                        </tr>
-                        <tr>
-                            <td><ion-icon name="checkmark-circle-outline"></ion-icon>HTML accessibility and semantic markup</td>
-                        </tr>
-                     </table>
-                </div>
-            </div>
-        </div>
-        <div class="card-sec">
-            <div class="img-container">
+        <section class="sub-topics-container">
+            <h1 class="category">HTML Sub Topics</h1>
+            <ul>
+              <li class="category">
+                <ion-icon name="checkmark-circle-outline"></ion-icon> HTML syntax
+                and structure
+              </li>
+              <li class="category">
+                <ion-icon name="checkmark-circle-outline"></ion-icon> HTML syntax
+                and structure
+              </li>
+              <li class="category">
+                <ion-icon name="checkmark-circle-outline"></ion-icon> HTML syntax
+                and structure
+              </li>
+              <li class="category">
+                <ion-icon name="checkmark-circle-outline"></ion-icon> HTML syntax
+                and structure
+              </li>
+              <li class="category" >
+                <ion-icon name="checkmark-circle-outline"></ion-icon> HTML syntax
+                and structure
+              </li>
+              <li class="category">
+                <ion-icon name="checkmark-circle-outline"></ion-icon> HTML syntax
+                and structure
+              </li>
+              <li class="category">
+                <ion-icon name="checkmark-circle-outline"></ion-icon> HTML syntax
+                and structure
+              </li>
+            </ul>
+        </section>
     
-            </div>
-            <div class="infoImg-container">
-                <p class="htmlBy-par"> <strong>HTML</strong> by <a href="#">Sarah Smith</a></p>
-                <div class="addToFav">
-                    <p>Interested about this topic?</p>
-                    <button>Add to Favourites<ion-icon name="heart-outline"></ion-icon></button>
-                    <p class="end-para">Unlimited Credits</p>
-                </div>
-            </div>
-        </div>
     </main>
     <footer>
         <div class="footer-container">
             <p>Developed with<ion-icon name="heart"></ion-icon> &copy; 2023</p>
         </div>
     </footer>
-    
-    <script>
-        const darkModeToggle = document.getElementById('dark-mode-toggle');
-        const body = document.body;
+    <div class="favorite-section" id="favorite-section">
+      <div class="container">
+          <div class="favourite-content">
+              <h2>My favorite Topics</h2>
+              <div class="fav-cards cards-container">
+                  <div class="card-sec fav-card">
+                      <div class="card-img img-react">
+                      </div>
+                      <div class="card-info">
+                          <h3>React</h3>
+                          <ion-icon name="star"></ion-icon>
+                          <ion-icon name="star"></ion-icon>
+                          <ion-icon name="star"></ion-icon>
+                          <ion-icon name="star"></ion-icon>
+                          <ion-icon name="star-outline"></ion-icon>
+                      </div>
+                  </div>
+                  <div class="card-sec fav-card">
+                      <div class="card-img img-css">
+                      </div>
+                      <div class="card-info">
+                          <h3>CSS</h3>
+                          <ion-icon name="star"></ion-icon>
+                          <ion-icon name="star"></ion-icon>
+                          <ion-icon name="star"></ion-icon>
+                          <ion-icon name="star"></ion-icon>
+                          <ion-icon name="star-outline"></ion-icon>
+                      </div>
+                  </div>
+                  
+              </div>
+          </div>
+       
+      </div>
+      <!-- You can add your favorite items here -->
+  </div>
+  <script>
+      const darkModeToggle = document.getElementById('dark-mode-toggle');
+      const body = document.body;
 
-       darkModeToggle.addEventListener('click', () => {
-          body.classList.toggle('dark-mode');
-       });
+     darkModeToggle.addEventListener('click', () => {
+        body.classList.toggle('dark-mode');
+     });
+
+     document.addEventListener('DOMContentLoaded', function () {
+      const favoritesButton = document.querySelectorAll('.user-controls button')[1];
+      const favoriteSection = document.getElementById('favorite-section');
+
+      favoritesButton.addEventListener('click', function () {
+          if (favoriteSection.style.display === 'block') {
+              favoriteSection.style.display = 'none';
+          } else {
+              favoriteSection.style.display = 'block';
+          }
+      });
+     });
     </script>
     <!-- this links are for icons -->
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>

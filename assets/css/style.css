@@ -5,11 +5,12 @@
     padding:0;
     margin:0;
     box-sizing: border-box;
+    font-family: 'Nunito Sans', sans-serif;
+    font-weight: 400;
 }
 body
 {
-  font-family: 'Nunito Sans', sans-serif;
-  font-weight: 400;
+  
   background-color: var(--bg_body);
   color: var(--body-text);
 
@@ -35,6 +36,23 @@ body
     margin: auto;
   
 }
+.category {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 0.9rem;
+  font-weight: 500;
+
+  
+}
+.card-title {
+  font-weight: 700;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
 
   /* header sec */
  header{
@@ -44,23 +62,23 @@ body
     display:flex;
     justify-content: space-between;
     align-items: center;
-    height: 70px;
+    padding:18px 0;
     background-color: var(--bg_default);
   }
   header h1{
-    font-size: 17px;
+    font-size: 1.2vw;
+    font-weight: 700;
     color:var(--brand-primary) ;
 
   }
   header button{
     width:7.7vw;
-    padding-top: 7px;
-    padding-bottom: 7px;
+    padding: 7px;
     border-radius: 5px;
     background-color: var(--bg_default);
     border-style: none;
     border:1.2px solid var(--lines-color);
-    font-size: 14px;
+    font-size: 1vw;
     box-shadow: 0 0 1px var(--lines-color);
     color: (var(--body-text));
     
@@ -73,8 +91,8 @@ body
  }
   /* welcome sec */
  .welcome-sec{
-    height:8vw;
     background-color: var(--bg_default);
+    height: auto;
  }
  
  .triangles {
@@ -111,87 +129,87 @@ body
   position:relative;
   top:40%;
   left:35.5%;
-
+  width:50%;
+  padding-top: 3.5vw;
+  padding-bottom: .8vw;
+  overflow:auto;
  }
  .welcome-content h2{
-  font-size: 22px;
+  font-size: 1.5vw;
+  font-weight: 700;
   color: var(--brand-secondary);
  }
+ 
+
+
+
  /*  web Tobics sec*/
  .webTobics-sec{
     height: auto;
-    position: relative;
+    position: relative; 
+    
   }
-  .search-sec{
-    width:91vw;
-    height:3.5vw;
-    background-color: var(--bg_default);
-    position: absolute;
-    top:3vh;
-    left:4vw;
-    border-radius: 7px;
-    box-shadow: 0 0 3px var(--lines-color);
-    display: flex;
-  }
-  .search-sec .search-place{
-    display: flex;
-    position: relative;
-    flex-grow: 1; 
+  .search-container input,
+  select {
+    background-color: transparent;
+    font-size: 1rem;
+    font-weight: 400;
+    color: var(--body-text);
   }
   
-  .search-sec input{
-    
-    border-style: none;
-    font-size: 17px;
-    background-color: var(--bg_default);
-    width:100%;
-    outline: none;
-  }
-  .search-place ion-icon{
-    padding:10px 10px;
-    font-size: 15px;
-    margin-top: 7px;
-  }
-  .search-sec label{
-    display: block;
-    text-align: left;
-    margin-top: 5px;
-    margin-bottom: 3px;
-    font-size: 12px;
-    color:var(--body-text);
-  }
-  .search-btns{
-    width:27%;
-    margin-left: 5px;
+  .search-container {
     display: flex;
-    
-  }
-  .search-btns button{
-    width:50%;
+    justify-content: space-between;
     background-color: var(--bg_default);
-    color:var(--body-text);
-    border-style: none;
-    border-left:1px solid var(--lines-color);
-    border-right: transparent;
-    text-align: left;
-    padding-left: 13px;
-    font-size: 14px;
-    position: relative;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    margin-block: 1.3rem;
+    border-radius: 0.7rem;
   }
-  .search-btns ion-icon{
-    position: absolute;
-    left: 85%;
-    top:50%;
-    font-size:11px ;
+  .search-input {
+    display: flex;
+    align-items: center;
+    padding-left: 0.7rem;
+    flex-grow: 2;
+  }
+  .search-input input {
+    width: 100%;
+    margin: 0;
+    border: none;
+    outline-color: var(--brand-primary);
+    padding-block: 0.5rem;
+    padding-left: 2rem;
+  }
+  .search-input ion-icon {
+    margin-right: -1.3rem;
     
   }
-  .search-btns .second-btn{
-    border-top-right-radius: 10px;
-    border-bottom-right-radius: 10px;
+  .search-bar-actions {
+    display: flex;
+    flex-grow: 0.31;
+  }
+  .drop-down-menu {
+    padding-block: 0.2rem;
+    padding-inline: 1rem;
+    display: flex;
+    flex-direction: column;
+    font-size: 0.9rem;
+    font-weight: 400;
+    width: 100%;
+  }
+
+  
+  .drop-down-menu label {
+    font-weight: 400;
+    font-size: 0.7rem;
+  }
+  .drop-down-menu select {
+    border: none;
+    outline: none;
+    margin-left: -0.2rem;
+    background-color: var(--bg_default);
   }
   .webTopics-info{
     position:relative;
-    top:6vw;
   }
   .webTopics-info h2{
     font-size: 1.7vw;
@@ -205,20 +223,21 @@ body
   }
   .cards-container {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); /* Responsive grid */
-    gap:20px; /* Spacing between grid items */
-    margin-top: 8vw; /* Adjust spacing as needed */
+    grid-template-columns: repeat(auto-fill, minmax(14rem, 1fr));
+    gap: 2rem;
+    margin-top: 0.9rem;
 }
 
 .card-sec {
     background-color: var(--bg_default);
     border-radius: 6px;
-    font-size: 12px;
-    height: 280px;
+    font-size: .75em;
+    box-shadow: 0 0 1px var(--lines-color);
+
 }
 
 .card-img {
-    height: 47%;
+    height: 11.5em;
     border-top-left-radius: 6px;
     border-top-right-radius: 6px;
     background-size: cover;
@@ -228,47 +247,54 @@ body
   .img-html{
     background-image:url(../cards/html.png) ;
     background-size: cover;
+    background-position: center;
 
   }
   .img-css{
     background-image:url(../cards/css.webp) ;
     background-size: cover;
+    background-position: center;
 
   }
   .img-js{
     background-image:url(../cards/javascript.jpg) ;
     background-size: cover;
+    background-position: center;
 
   }
   .img-jquery{
     background-image:url(../cards/jquery.png) ;
     background-size: cover;
+    background-position: center;
 
   }
   .img-ang{
     background-image:url(../cards/angular.png) ;
     background-size: cover;
-    background-position: -70px;
+    background-position: center;
   }
   .img-react{
     background-image:url(../cards/react.webp) ;
     background-size: cover;
+    background-position: center;
 
 
   }
   .card-info{
-    margin-top: 14px;
-    margin-left: 13px;
-    font-size: 14px;
+    padding: 13px;
+    font-size: 1vw;
   }
   .card-info ion-icon{
     color: orange;
     margin-top: 20px;
-    font-size: 14px;
+    font-size: 1vw;
     
   }
+  .card-info .cardName ,.card-info h3{
+    font-weight: 700;
+  }
   .card-info .author-name{
-    margin-top: 10px;
+    padding:14px 0 7px 0;
   }
   footer{
     position:relative;
@@ -281,14 +307,15 @@ body
     
   }
   .footer-container p{
-    font-size: 17px;
+    font-size: 1.2vw;
+    font-weight: 400;
     font-weight: 700;
 
   }
    .footer-container ion-icon{
     color: var(--heart-color);
     margin-bottom:-4px;
-    font-size: 23px;
+    font-size:1.7vw;
    }
    .favorite-section {
     display: none;
@@ -311,18 +338,18 @@ body
     width: 100%;  
   }
    .favourite-content h2{
-    font-size: 18px;
+    font-size: 1.3vw;
     margin-top: -5px;
     color: var(--body-text);
    }
    .fav-cards{
     margin-top: 1vw;
-    grid-template-columns: repeat(auto-fill, minmax(114.48px, 1fr)); /* Responsive grid */
+    grid-template-columns: repeat(auto-fill, minmax(10%, 1fr)); /* Responsive grid */
 
    }
    .fav-card{
-    height: 119px;
     box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.3);
+    font-size: .5em;
 
    }
    .fav-card ion-icon{
@@ -330,175 +357,38 @@ body
    }
  
 
-@media screen and (max-width: 766px) {
-  
-  header .header-content{
-    height:100px;
-
+  /* Mobile View */
+  @media only screen and (max-width: 800px) {
+    .search-container {
+      flex-wrap: wrap;
+    }
+    .search-bar-actions {
+      width: 100%;
+    }
+    .search-input {
+      border-bottom: 1px solid var(--lines-color);
+      padding-block: 0.5rem;
+    }
+    .search-bar-actions > div:first-child {
+      border-right: 1px solid var(--lines-color);
+      padding-bottom: 0.9rem;
+    }
+    header button span{
+      display:none;
+    }
   }
-  header h1 {
-      margin-top: 10px;
-      font-size: 20px;
-  }
-  header button {
-      font-size: 0px;
-      padding:8px 28px;
-      border:2px solid var(--lines-color);
-      margin-right: 5px;
-
-      
-  }
-  header ion-icon{
-    font-size: 25px;
-    margin-left:-10px;
-
-  }
-  .welcome-sec{
-    height: 29vw;
-  }
-  .triangle-topleft {
-    width:60vw;
-    height: 7vw;
-  }
-  .triangle-topright{
-    width:75vw;
-    height:  7vw;;
-  }
-  .welcome-content{
-    position:relative;
-    top:30%;
-    left:4%;
-    width:94%;
-  
-   }
-   .welcome-content h2{
-    font-size: 30px;
-   }
-   .welcome-content p{
-    font-size: 20px;
-   }
-   /* search section */
-   .search-sec{
-    display:block;
-    margin-top:3vw;
-    height: 26vw;
-    
-   }
-   .search-place{
-    border-style:none;
-    height: 13vw;
-    border-bottom: 1px solid var(--lines-color);
-    
-   }
-   .search-place input{
-    width:100%;
-    height: 100%;
-    margin:auto;
-    border-top-right-radius:10px;
-    font-size:30px ;
-    margin-left: 20px;
-   }
-   .search-place ion-icon{
-     margin-top: 25px;
-     margin-left:10px;
-     font-size: 30px;
-
-   }
-   .search-btns{
-    width:95%;
-    margin:auto;
-    height: 13vw;
-   }
+  /* Desktop View */
+  @media only screen and (min-width: 801px) {
+    .search-input {
+      padding-block: 0;
+    }
+    .drop-down-menu {
+      border-left: 1px solid var(--lines-color);
+    }
    
-   .search-btns button{
-    border-style: none;
-    width:50%;
-    font-size: 20px;
-
-   }
-   .search-btns label{
-    font-size: 15px;
-   }
-   
-   .webTopics-info{
-    overflow: hidden;
-    top:35vw;
-
-   }
-   .webTopics-info h2{
-    font-size: 35px;
-   }
-   .cards-container{
-    margin-top:40vw;
-    display: block;
-   }
-   .card-sec{
-    margin-bottom: 20px;
-    height: 50vw;
-   }
-   .card-img{
-    height: 60%;
-   }
-  .footer-container{
-    left:35%;
   }
   
 
-  
-}
-
 
   
-  @media screen and (min-width: 767px) and (max-width: 1023px) {
-    
-      header .header-content{
-        height: 40px;
-      }
-      header h1{
-        font-size: 14px;
-    
-      }
-      header button{
-        height: 90%;
-        width:90px;
-        font-size: 12px;
-    
-      }
-     .welcome-content h2{
-      font-size: 15px;
-     }
-     .welcome-content p{
-      font-size: 12px;
-     }
-
-     
-    .search-sec input{
-      font-size: 14px;
-    }
-    .search-place ion-icon{
-      padding:.9px 5px;
-      font-size: 12px;
-      margin-top: 7px;
-    }
-    .search-sec label{
-      margin-top: 3px;
-      margin-bottom: 2px;
-      font-size: 10px;
-    }
-    .search-btns{
-      width:30%;
-      
-    }
-    .search-btns button,.search-btns ion-icon{
-      font-size: 10px;
-  
-    }
-    .cards-container {
-      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  }
-    .card-info{
-      font-size: 12px;
-    }
-     
-    }
   

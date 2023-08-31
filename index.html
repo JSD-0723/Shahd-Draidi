@@ -13,8 +13,8 @@
             <div class="header-content">
                 <h1>Web Topics</h1>
                 <div class="user-controls">
-                    <button id="dark-mode-toggle"><ion-icon name="moon-outline"></ion-icon>Dark Mode</button>
-                    <button><ion-icon name="heart-outline"></ion-icon>Favourites</button>
+                    <button id="dark-mode-toggle"><ion-icon name="moon-outline"></ion-icon><span>Dark Mode</span></button>
+                    <button><ion-icon name="heart-outline"></ion-icon><span>Favourites</span></button>
                 </div>
             </div>
             
@@ -26,27 +26,39 @@
             <div class="triangle-topleft"></div>
             <div class="triangle-topright"></div>
         </div>
-        <div class="welcome-content">
+        <div class="welcome-content ">
             <h2>Welcome to our website!</h2>
-            <p>We have a new design that's fresh,modern,and easy to use.</p>
+            <p class="category">We have a new design that's fresh,modern,and easy to use.</p>
         </div>
         
     </div>
     
     <main>
+
         <div class="webTobics-sec">
             <div class="container">
-                <div class="search-sec">
-                    <div class="search-place">
-                        <ion-icon name="search-outline"></ion-icon>
-                        <input type="text" placeholder="Search the website..."/>
-    
+                <div class="search-container">
+                    <div class="search-input">
+                      <ion-icon name="search-outline"></ion-icon>
+                      <input type="text" placeholder="Search the website..." />
                     </div>
-                    <div class="search-btns">
-                        <button class="first-btn"><label>sort by:</label>Default<ion-icon name="chevron-down-outline"></ion-icon></button>
-                        <button class="final-btn"><label>Filter by:</label>Default<ion-icon name="chevron-down-outline"></ion-icon></button>
+                    <div class="search-bar-actions">
+                      <div class="drop-down-menu">
+                        <label for="sort">Sort by:</label>
+                        <select name="sort" id="sort">
+                          <option value="default" selected>Default</option>
+                        
+                        </select>
+                      </div>
+                      <div class="drop-down-menu">
+                        <label for="filter">Filter by:</label>
+                        <select name="filter" id="filter">
+                          <option value="default" selected>Default</option>
+                         
+                        </select>
+                      </div>
                     </div>
-                </div>
+                  </div>
                 <div class="webTopics-info">
                     <h2>"24" Web Topics Found</h2>
                 </div>
@@ -56,14 +68,14 @@
                             <div class="card-img img-html">
                             </div>
                             <div class="card-info">
-                                <p>Web Development Languages</p>
-                                <h3>HTML</h3>
+                                <p class="category">Web Development Languages</p>
+                                <h3 class="card-title">HTML</h3>
                                 <ion-icon name="star"></ion-icon>
                                 <ion-icon name="star"></ion-icon>
                                 <ion-icon name="star"></ion-icon>
                                 <ion-icon name="star"></ion-icon>
                                 <ion-icon name="star-outline"></ion-icon>
-                                <p class="author-name">Author:Sarah Smith</p>
+                                <p class="author-name">Author: Sarah Smith</p>
                             </div>
                         </div>
                     </a>
@@ -72,14 +84,14 @@
                             <div class="card-img img-css">
                             </div>
                             <div class="card-info">
-                                <p>Web Development Languages</p>
-                                <h3>CSS</h3>
+                                <p class="category">Web Development Languages</p>
+                                <h3 class="card-title">CSS</h3>
                                 <ion-icon name="star"></ion-icon>
                                 <ion-icon name="star"></ion-icon>
                                 <ion-icon name="star"></ion-icon>
                                 <ion-icon name="star"></ion-icon>
                                 <ion-icon name="star-outline"></ion-icon>
-                                <p class="author-name">Author:Sarah Smith</p>
+                                <p class="author-name">Author: Sarah Smith</p>
                             </div>
                         </div>
                     </a>
@@ -88,14 +100,14 @@
                             <div class="card-img img-js">
                             </div>
                             <div class="card-info">
-                                <p>Web Development Languages</p>
-                                <h3>Java Script</h3>
+                                <p class="category">Web Development Languages</p>
+                                <h3 class="card-title">Java Script</h3>
                                 <ion-icon name="star"></ion-icon>
                                 <ion-icon name="star"></ion-icon>
                                 <ion-icon name="star"></ion-icon>
                                 <ion-icon name="star"></ion-icon>
                                 <ion-icon name="star-outline"></ion-icon>
-                                <p class="author-name">Author:Sarah Smith</p>
+                                <p class="author-name">Author: Sarah Smith</p>
                             </div>
                         </div>
                     </a>
@@ -104,14 +116,14 @@
                             <div class="card-img img-jquery">
                             </div>
                             <div class="card-info">
-                                <p>Web Development Languages</p>
-                                <h3>HTML</h3>
+                                <p class="category">Web Development Languages</p>
+                                <h3 class="card-title">HTML</h3>
                                 <ion-icon name="star"></ion-icon>
                                 <ion-icon name="star"></ion-icon>
                                 <ion-icon name="star"></ion-icon>
                                 <ion-icon name="star"></ion-icon>
                                 <ion-icon name="star-outline"></ion-icon>
-                                <p class="author-name">Author:Sarah Smith</p>
+                                <p class="author-name">Author: Sarah Smith</p>
                             </div>
                         </div>
                     </a>
@@ -120,14 +132,14 @@
                             <div class="card-img img-ang">
                             </div>
                             <div class="card-info">
-                                <p>Web Development Languages</p>
-                                <h3>HTML</h3>
+                                <p class="category">Web Development Languages</p>
+                                <h3 class="card-title" >HTML</h3>
                                 <ion-icon name="star"></ion-icon>
                                 <ion-icon name="star"></ion-icon>
                                 <ion-icon name="star"></ion-icon>
                                 <ion-icon name="star"></ion-icon>
                                 <ion-icon name="star-outline"></ion-icon>
-                                <p class="author-name">Author:Sarah Smith</p>
+                                <p class="author-name">Author: Sarah Smith</p>
                             </div>
                         </div>
                     </a>
@@ -136,14 +148,14 @@
                             <div class="card-img img-react">
                             </div>
                             <div class="card-info">
-                                <p>Web Development Languages</p>
-                                <h3>HTML</h3>
+                                <p class="category">Web Development Languages</p>
+                                <h3 class="card-title">HTML</h3>
                                 <ion-icon name="star"></ion-icon>
                                 <ion-icon name="star"></ion-icon>
                                 <ion-icon name="star"></ion-icon>
                                 <ion-icon name="star"></ion-icon>
                                 <ion-icon name="star-outline"></ion-icon>
-                                <p class="author-name">Author:Sarah Smith</p>
+                                <p class="author-name">Author: Sarah Smith</p>
                             </div>
                         </div>
                     </a>

@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>details</title>
     <link rel="stylesheet" href="../css/details.css">
+    <link rel="stylesheet" href="../css/light.css">
+    <link rel="stylesheet" href="../css/dark.css">
 </head>
 <body>
     <header>
@@ -12,14 +14,19 @@
             <div class="header-content">
                 <a href="../../index.html"><h1>Web Topics</h1></a>
                 <div class="user-controls">
-                    <button id="dark-mode-toggle"><ion-icon name="moon-outline"></ion-icon><span>Dark Mode</span></button>
-                    <button><ion-icon name="heart-outline"></ion-icon><span>Favourites</span></button>
-                </div>
+                    <button id="dark-mode" class="icon-button">
+                      <ion-icon id="moon" class="nav-icon" name="moon-outline"></ion-icon>
+                      <span id="dark-name">Dark Mode</span>
+                    </button>
+                    <button  class="icon-button">
+                      <ion-icon class="nav-icon" name="heart-outline"></ion-icon>
+                      <span >Favourites</span>
+                    </button>
+                  </div>
             </div>
             
         </div>
     </header>
-    
     <div class="welcome-sec">
         <div class="triangles">
             <div class="triangle-topleft"></div>
@@ -45,7 +52,7 @@
                     <ion-icon name="star"></ion-icon>
                     <ion-icon name="star-outline"></ion-icon>
                 </div>
-                <p class="html-desc card-para-cat">HTML(Hypertext Markup Language) is the standard markup language for
+                <p class="card-desc card-para-cat">HTML(Hypertext Markup Language) is the standard markup language for
                     creating web pages and other information that can be displayed in a web
                     browser. It provides a structure for content and defines how it should be
                     displayed on a web page, including text , images, and multimedia.HTML is
@@ -58,9 +65,9 @@
                       <p class="category"><span>HTML</span> by <a href="#">Sarah Smith</a></p>
                       <div class="add-favorites-container">
                         <p class="category">Interested about this topic?</p>
-                        <div class="add-favorites-button category">
+                        <button class="addfav-button category">
                           Add to Favorites <ion-icon class="heart-icon"name="heart-outline"></ion-icon>
-                        </div>
+                        </button>
                         <p class="unlimited-credits category">Unlimited Credits</p>
                       </div>
                     </div>
@@ -105,19 +112,19 @@
     
     </main>
     <footer>
-        <div class="footer-container">
-            <p>Developed with<ion-icon name="heart"></ion-icon> &copy; 2023</p>
-        </div>
-    </footer>
+      <div class="footer-container">
+          <p>Developed with<ion-icon name="heart"></ion-icon> &copy; 2023</p>
+      </div>
+  </footer>
     <div class="favorite-section" id="favorite-section">
       <div class="container">
           <div class="favourite-content">
               <h2>My favorite Topics</h2>
               <div class="fav-cards cards-container">
                   <div class="card-sec fav-card">
-                      <div class="card-img img-react">
+                      <div class="card-img fav-img img-react">
                       </div>
-                      <div class="card-info">
+                      <div class="card-info fav-info">
                           <h3>React</h3>
                           <ion-icon name="star"></ion-icon>
                           <ion-icon name="star"></ion-icon>
@@ -127,9 +134,9 @@
                       </div>
                   </div>
                   <div class="card-sec fav-card">
-                      <div class="card-img img-css">
+                      <div class="card-img fav-img img-css">
                       </div>
-                      <div class="card-info">
+                      <div class="card-info fav-info">
                           <h3>CSS</h3>
                           <ion-icon name="star"></ion-icon>
                           <ion-icon name="star"></ion-icon>
@@ -145,29 +152,14 @@
       </div>
       <!-- You can add your favorite items here -->
   </div>
-  <script>
-      const darkModeToggle = document.getElementById('dark-mode-toggle');
-      const body = document.body;
-
-     darkModeToggle.addEventListener('click', () => {
-        body.classList.toggle('dark-mode');
-     });
-
-     document.addEventListener('DOMContentLoaded', function () {
-      const favoritesButton = document.querySelectorAll('.user-controls button')[1];
-      const favoriteSection = document.getElementById('favorite-section');
-
-      favoritesButton.addEventListener('click', function () {
-          if (favoriteSection.style.display === 'block') {
-              favoriteSection.style.display = 'none';
-          } else {
-              favoriteSection.style.display = 'block';
-          }
-      });
-     });
-    </script>
+ 
+ 
     <!-- this links are for icons -->
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+     <!-- dark mode -->
+     <script  src="../js/dark.js"></script>
+     <!-- favourite sec -->
+     <script src="../js/fav.js"></script>
 </body>
 </html>

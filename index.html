@@ -4,23 +4,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>home</title>
-    <link rel="stylesheet" href="assets/css/style.css">
-
+    <link id="theme-style" rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/light.css">
+    <link rel="stylesheet" href="assets/css/dark.css">
 </head>
 <body>
     <header>
         <div class="container">
             <div class="header-content">
-                <h1>Web Topics</h1>
+                <a href="#"><h1>Web Topics</h1></a>
                 <div class="user-controls">
-                    <button id="dark-mode-toggle"><ion-icon name="moon-outline"></ion-icon><span>Dark Mode</span></button>
-                    <button><ion-icon name="heart-outline"></ion-icon><span>Favourites</span></button>
-                </div>
+                    <button id="dark-mode" class="icon-button">
+                      <ion-icon id="moon" class="nav-icon" name="moon-outline"></ion-icon>
+                      <span id="dark-name">Dark Mode</span>
+                    </button>
+                    <button  class="icon-button">
+                      <ion-icon class="nav-icon" name="heart-outline"></ion-icon>
+                      <span >Favourites</span>
+                    </button>
+                  </div>
             </div>
             
         </div>
     </header>
-    
     <div class="welcome-sec">
         <div class="triangles">
             <div class="triangle-topleft"></div>
@@ -32,7 +38,6 @@
         </div>
         
     </div>
-    
     <main>
 
         <div class="webTobics-sec">
@@ -177,9 +182,9 @@
                 <h2>My favorite Topics</h2>
                 <div class="fav-cards cards-container">
                     <div class="card-sec fav-card">
-                        <div class="card-img img-react">
+                        <div class="card-img fav-img img-react">
                         </div>
-                        <div class="card-info">
+                        <div class="card-info fav-info">
                             <h3>React</h3>
                             <ion-icon name="star"></ion-icon>
                             <ion-icon name="star"></ion-icon>
@@ -189,9 +194,9 @@
                         </div>
                     </div>
                     <div class="card-sec fav-card">
-                        <div class="card-img img-css">
+                        <div class="card-img fav-img img-css">
                         </div>
-                        <div class="card-info">
+                        <div class="card-info fav-info">
                             <h3>CSS</h3>
                             <ion-icon name="star"></ion-icon>
                             <ion-icon name="star"></ion-icon>
@@ -207,34 +212,13 @@
         </div>
         <!-- You can add your favorite items here -->
     </div>
-    <script>
-        const darkModeToggle = document.getElementById('dark-mode-toggle');
-        const body = document.body;
-
-       darkModeToggle.addEventListener('click', () => {
-          body.classList.toggle('dark-mode');
-       });
-
-       document.addEventListener('DOMContentLoaded', function () {
-        const favoritesButton = document.querySelectorAll('.user-controls button')[1];
-        const favoriteSection = document.getElementById('favorite-section');
-
-        favoritesButton.addEventListener('click', function () {
-            if (favoriteSection.style.display === 'block') {
-                favoriteSection.style.display = 'none';
-            } else {
-                favoriteSection.style.display = 'block';
-            }
-        });
-    });
-
-  
-
-
-    </script>
+   
     <!-- this links are for icons -->
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-
+    <!-- dark mode -->
+    <script  src="assets/js/dark.js"></script>
+    <!-- favourite sec -->
+    <script src="assets/js/fav.js"></script>
 </body>
 </html>

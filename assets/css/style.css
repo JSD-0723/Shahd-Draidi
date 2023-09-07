@@ -21,7 +21,18 @@ body
     width: 92%;
     margin: auto;
 }
-
+.truncate-text {
+  width: 100%; 
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.categ2lines {
+  max-height: 2.4rem;  
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
 
 /* header sec */
 header{
@@ -211,45 +222,10 @@ select {
   border-top-left-radius: 6px;
   border-top-right-radius: 6px;
   background-size: cover;
-}
-
-
-.img-html{
-  background-image:url(../cards/html.png) ;
-  background-size: cover;
-  background-position: center;
-
-}
-.img-css{
-  background-image:url(../cards/css.webp) ;
-  background-size: cover;
-  background-position: center;
-
-}
-.img-js{
-  background-image:url(../cards/javascript.jpg) ;
-  background-size: cover;
-  background-position: center;
-
-}
-.img-jquery{
-  background-image:url(../cards/jquery.png) ;
-  background-size: cover;
-  background-position: center;
-
-}
-.img-ang{
-  background-image:url(../cards/angular.png) ;
-  background-size: cover;
   background-position: center;
 }
-.img-react{
-  background-image:url(../cards/react.webp) ;
-  background-size: cover;
-  background-position: center;
 
 
-}
 .card-info{
   padding: 13px;
   font-size: 0.85rem;

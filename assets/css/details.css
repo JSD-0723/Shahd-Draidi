@@ -321,8 +321,13 @@ footer{
 
  /* Mobile view */
  @media only screen and (max-width: 1200px) {
-  header button span{
-    display:none;
+  header span{
+    font-size: 0%;
+  }
+  .welcome-content{
+    width:91%;
+    margin: auto;
+    left: 0;
   }
   .details-container{
     margin:auto;

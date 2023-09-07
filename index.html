@@ -52,14 +52,15 @@
                         <label for="sort">Sort by:</label>
                         <select name="sort" id="sort">
                           <option value="default" selected>Default</option>
-                        
+                          <option value="TopicTitle">Topic Title</option>
+                          <option value="AuthorName">Author Name</option>
                         </select>
                       </div>
                       <div class="drop-down-menu">
                         <label for="filter">Filter by:</label>
                         <select name="filter" id="filter">
                           <option value="default" selected>Default</option>
-                         
+                          
                         </select>
                       </div>
                     </div>
@@ -67,103 +68,8 @@
                 <div class="webTopics-info">
                     <h2>"24" Web Topics Found</h2>
                 </div>
-                <div class="cards-container">
-                    <a class="html-details" href="assets/html/details.html">
-                        <div class="card-sec">
-                            <div class="card-img img-html">
-                            </div>
-                            <div class="card-info">
-                                <p class="category">Web Development Languages</p>
-                                <h3 class="card-title">HTML</h3>
-                                <ion-icon name="star"></ion-icon>
-                                <ion-icon name="star"></ion-icon>
-                                <ion-icon name="star"></ion-icon>
-                                <ion-icon name="star"></ion-icon>
-                                <ion-icon name="star-outline"></ion-icon>
-                                <p class="author-name">Author: Sarah Smith</p>
-                            </div>
-                        </div>
-                    </a>
-                    <a class="html-details" href="assets/html/details.html">
-                        <div class="card-sec">
-                            <div class="card-img img-css">
-                            </div>
-                            <div class="card-info">
-                                <p class="category">Web Development Languages</p>
-                                <h3 class="card-title">CSS</h3>
-                                <ion-icon name="star"></ion-icon>
-                                <ion-icon name="star"></ion-icon>
-                                <ion-icon name="star"></ion-icon>
-                                <ion-icon name="star"></ion-icon>
-                                <ion-icon name="star-outline"></ion-icon>
-                                <p class="author-name">Author: Sarah Smith</p>
-                            </div>
-                        </div>
-                    </a>
-                    <a class="html-details" href="assets/html/details.html">
-                        <div class="card-sec">
-                            <div class="card-img img-js">
-                            </div>
-                            <div class="card-info">
-                                <p class="category">Web Development Languages</p>
-                                <h3 class="card-title">Java Script</h3>
-                                <ion-icon name="star"></ion-icon>
-                                <ion-icon name="star"></ion-icon>
-                                <ion-icon name="star"></ion-icon>
-                                <ion-icon name="star"></ion-icon>
-                                <ion-icon name="star-outline"></ion-icon>
-                                <p class="author-name">Author: Sarah Smith</p>
-                            </div>
-                        </div>
-                    </a>
-                    <a class="html-details" href="assets/html/details.html">
-                        <div class="card-sec">
-                            <div class="card-img img-jquery">
-                            </div>
-                            <div class="card-info">
-                                <p class="category">Web Development Languages</p>
-                                <h3 class="card-title">HTML</h3>
-                                <ion-icon name="star"></ion-icon>
-                                <ion-icon name="star"></ion-icon>
-                                <ion-icon name="star"></ion-icon>
-                                <ion-icon name="star"></ion-icon>
-                                <ion-icon name="star-outline"></ion-icon>
-                                <p class="author-name">Author: Sarah Smith</p>
-                            </div>
-                        </div>
-                    </a>
-                    <a class="html-details" href="assets/html/details.html">
-                        <div class="card-sec">
-                            <div class="card-img img-ang">
-                            </div>
-                            <div class="card-info">
-                                <p class="category">Web Development Languages</p>
-                                <h3 class="card-title" >HTML</h3>
-                                <ion-icon name="star"></ion-icon>
-                                <ion-icon name="star"></ion-icon>
-                                <ion-icon name="star"></ion-icon>
-                                <ion-icon name="star"></ion-icon>
-                                <ion-icon name="star-outline"></ion-icon>
-                                <p class="author-name">Author: Sarah Smith</p>
-                            </div>
-                        </div>
-                    </a>
-                    <a class="html-details" href="assets/html/details.html">
-                        <div class="card-sec">
-                            <div class="card-img img-react">
-                            </div>
-                            <div class="card-info">
-                                <p class="category">Web Development Languages</p>
-                                <h3 class="card-title">HTML</h3>
-                                <ion-icon name="star"></ion-icon>
-                                <ion-icon name="star"></ion-icon>
-                                <ion-icon name="star"></ion-icon>
-                                <ion-icon name="star"></ion-icon>
-                                <ion-icon name="star-outline"></ion-icon>
-                                <p class="author-name">Author: Sarah Smith</p>
-                            </div>
-                        </div>
-                    </a>
+                <div class="cards-container" id="cards-container">
+                    
                     
                 </div>
                 
@@ -220,5 +126,11 @@
     <script  src="assets/js/dark.js"></script>
     <!-- favourite sec -->
     <script src="assets/js/fav.js"></script>
+    <!-- show webTopics card -->
+    <script  src="assets/js/webTopics.js"></script>
+    <!-- search input -->
+    <script src="assets/js/search.js"></script>
+    <!-- sort -->
+    <script src="assets/js/sort.js"></script>
 </body>
 </html>

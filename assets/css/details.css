@@ -197,7 +197,6 @@ li ion-icon{
 }
 .img-cont{
   height: 12.5rem;
-  background-image: url(../cards/javascript.jpg);
   background-size: cover;
   background-position: center;
 }
